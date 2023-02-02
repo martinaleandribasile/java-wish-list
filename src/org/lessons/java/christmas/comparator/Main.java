@@ -21,7 +21,7 @@ public class Main {
 				 System.out.println("nella tua lista sono presenti n: " + desideri.size() + " desideri");
 			 }else if(scelta.equals("e")) {
 				 System.out.println("Grazie per aver inserito i tuoi desideri!");
-				// Collections.sort(desideri);
+				Collections.sort(desideri); // classe comparable con metodo compareto() 
 				 // ordinare in base alla lunghezza
 				 Collections.sort(desideri, new RegaloComparator());
 				 System.out.println("La tua lista contiene: ");

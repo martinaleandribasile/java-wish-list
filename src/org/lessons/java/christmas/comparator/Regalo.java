@@ -2,7 +2,7 @@ package org.lessons.java.christmas.comparator;
 
 import java.util.Random;
 
-public class Regalo {
+public class Regalo implements Comparable<Regalo>{
 	private String nome;
 	private float prezzo;
 	
@@ -31,5 +31,10 @@ public class Regalo {
 	
 	public String toString() {
 		return nome + " " +  prezzo;
+	}
+
+	@Override
+	public int compareTo(Regalo o) {
+		return Float.compare(this.prezzo, o.prezzo);
 	}
 }
