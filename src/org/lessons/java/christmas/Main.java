@@ -2,14 +2,14 @@ package org.lessons.java.christmas;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		ArrayList<String> desideri = new ArrayList<String>();
+		 List<String> desideri = new ArrayList<String>();
 		 Scanner scanner = new Scanner(System.in);
-		 Scanner desiderio = new Scanner(System.in);
 		 String scelta="";
 		 System.out.println("Ecco la tua lista dei desideri!");
 		do {
@@ -17,7 +17,7 @@ public class Main {
 			 scelta= scanner.nextLine();
 			 if(scelta.equals("d")) {
 				 System.out.println("Inserisci il tuo desiderio!");
-				 desideri.add(desiderio.nextLine()); 
+				 desideri.add(scanner.nextLine()); 
 				 System.out.println("nella tua lista sono presenti n: " + desideri.size() + " desideri");
 			 }else if(scelta.equals("e")) {
 				 System.out.println("Grazie per aver inserito i tuoi desideri!");
@@ -30,7 +30,6 @@ public class Main {
 				 System.out.println("L'input inserito non e' valdio, si prega di riprovare");
 			 }
 		}while(!scelta.equals("e"));
-		desiderio.close();
 		scanner.close();
 	}
 
